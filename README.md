@@ -4,8 +4,6 @@
 
 ## Gilberto Ángeles Hernández, Omar Torres Hernandez
 
-## Omar Torres Hernández
-
 ## Grado: 4TI
 
 ## Grupo DSMG1
