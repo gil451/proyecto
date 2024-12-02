@@ -1,0 +1,86 @@
+/* Reinicio básico */
+* {
+    margin: 0;               /* Elimina márgenes por defecto de todos los elementos */
+    padding: 0;              /* Elimina los rellenos por defecto de todos los elementos */
+    box-sizing: border-box;  /* Cambia el modelo de caja para que el padding y el borde se incluyan en el ancho y alto total del elemento */
+    font-family: 'Montserrat', sans-serif; /* Define la tipografía principal de la página */
+}
+
+/* Estilo del cuerpo */
+body {
+    background-color: #f0f8ff; /* Define un fondo azul claro para la página */
+    color: #333;               /* Define el color de texto oscuro para garantizar el contraste y facilitar la lectura */
+}
+
+/* Título principal */
+h1 {
+    text-align: center;        /* Centra el texto del título principal */
+    color: #0056b3;            /* Define un color azul fuerte para el título */
+    margin: 20px 0;            /* Añade margen arriba y abajo del título */
+    font-size: 2rem;           /* Establece un tamaño de fuente grande para el título */
+}
+
+/* Estilo del contenedor principal */
+main {
+    display: grid;                             /* Usa grid layout para organizar los elementos */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Define columnas flexibles que se ajustan automáticamente a los tamaños de pantalla */
+    gap: 20px;                                 /* Añade espacio de 20px entre los elementos */
+    padding: 20px;                             /* Añade un relleno de 20px alrededor del contenido */
+    max-width: 1200px;                         /* Establece un ancho máximo de 1200px para el contenedor */
+    margin: 0 auto;                            /* Centra el contenedor dentro de la página */
+}
+
+/* Estilo de cada artículo */
+article {
+    background-color: #e3f2fd; /* Define un fondo azul suave para cada artículo */
+    border-radius: 10px;       /* Redondea las esquinas del artículo */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Añade una sombra ligera para dar profundidad al artículo */
+    overflow: hidden;          /* Evita que el contenido sobresalga fuera del contenedor */
+    transition: transform 0.3s, box-shadow 0.3s; /* Añade transiciones suaves cuando se interactúa con el artículo */
+}
+
+article:hover {
+    transform: scale(1.05);          /* Aumenta ligeramente el tamaño del artículo cuando se pasa el ratón sobre él */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Aumenta la sombra para dar un efecto de elevación al pasar el ratón */
+}
+
+/* Imagen del personaje */
+.image-container {
+    display: flex;                    /* Usa flexbox para alinear el contenido dentro del contenedor */
+    justify-content: center;          /* Centra la imagen dentro del contenedor */
+    background-color: #bbdefb;        /* Establece un fondo azul intermedio para el contenedor de la imagen */
+    padding: 10px;                    /* Añade un relleno de 10px dentro del contenedor de la imagen */
+}
+
+.image-container img {
+    width: 100%;                      /* Hace que la imagen ocupe todo el ancho disponible */
+    height: auto;                     /* Mantiene la proporción de la imagen */
+    border-radius: 8px;               /* Redondea las esquinas de la imagen */
+}
+
+/* Información del personaje */
+article h2 {
+    font-size: 1.5rem;                /* Define un tamaño de fuente más pequeño para el nombre del personaje */
+    color: #004ba0;                   /* Establece un color azul más oscuro para el nombre */
+    text-align: center;               /* Centra el texto */
+    margin: 10px 0;                   /* Añade un margen arriba y abajo */
+}
+
+article span {
+    display: block;                   /* Hace que el span se muestre como un bloque (una línea completa) */
+    text-align: center;               /* Centra el texto dentro del span */
+    font-size: 1rem;                  /* Define un tamaño de fuente más pequeño para el estado del personaje */
+    color: #0056b3;                   /* Establece el color del texto como azul */
+    margin-bottom: 10px;              /* Añade un margen en la parte inferior del span */
+}
+
+/* Ajuste para dispositivos pequeños */
+@media (max-width: 600px) {
+    main {
+        grid-template-columns: 1fr;  /* En pantallas pequeñas, muestra los artículos en una sola columna */
+    }
+
+    h1 {
+        font-size: 1.5rem;           /* Reduce el tamaño de fuente del título para pantallas pequeñas */
+    }
+}
